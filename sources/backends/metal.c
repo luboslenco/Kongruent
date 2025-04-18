@@ -243,8 +243,8 @@ static void write_globals(char *code, size_t *offset) {
 			*offset += sprintf(&code[*offset], "constant float _%" PRIu64 " = %f;\n\n", g->var_index, g->value.value.floats[0]);
 		}
 		else if (base_type == float2_id) {
-			*offset += sprintf(&code[*offset], "constant float2 _%" PRIu64 " = float2(%f, %f);\n\n", g->var_index, g->value.value.floats[0],
-			                   g->value.value.floats[1]);
+			*offset +=
+			    sprintf(&code[*offset], "constant float2 _%" PRIu64 " = float2(%f, %f);\n\n", g->var_index, g->value.value.floats[0], g->value.value.floats[1]);
 		}
 		else if (base_type == float3_id) {
 			*offset += sprintf(&code[*offset], "constant float3 _%" PRIu64 " = float3(%f, %f, %f);\n\n", g->var_index, g->value.value.floats[0],
@@ -252,7 +252,7 @@ static void write_globals(char *code, size_t *offset) {
 		}
 		else if (base_type == float4_id) {
 			*offset += sprintf(&code[*offset], "constant float4 _%" PRIu64 " = float4(%f, %f, %f, %f);\n\n", g->var_index, g->value.value.floats[0],
-				               g->value.value.floats[1], g->value.value.floats[2], g->value.value.floats[3]);
+			                   g->value.value.floats[1], g->value.value.floats[2], g->value.value.floats[3]);
 		}
 	}
 }
